@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Black: #000000cc;
+  --White: #ffffff;
+  --Red: #ff0000;
+  --Green: #008000;
+  --Orange: #ff9300;
+  --Blue: #1ee3cf;
+  --Purple: #7e1a83;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+.Loader {
+  background-color: var(--Black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: var(--White);
+}
+
+.Loader img {
+  width: max(350px, 80vw);
+}
+
+.Loader p {
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--Blue);
+}
+
+.RickAndMortyApp__image-container {
+  background-position: center;
+  background-size: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  min-height: 30vh;
+}
+
+input {
+  background-color: var(--Black);
+  padding: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  color: var(--White);
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+}
+
+button {
+  background-color: var(--White);
+  padding: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--Blue);
+  outline: none;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+.RickAndMortyApp__info-container {
+  background-color: var(--Purple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  color: var(--White);
+}
+
+.LocationInfo {
+  background-color: var(--Black);
+  margin-top: 50px;
+  padding: 2rem 4rem;
+  width: max(350px, 50vw);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.LocationInfo h2 {
+  color: var(--Blue);
+}
+
+.LocationInfo ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px
+}
+
+.CharacterCard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 50px 0;
+  max-width: 80vw;
+  text-align: center;
+}
+
+.CharacterCard {
+  background-color: var(--Black);
+  max-width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+}  
+
+.CharacterCard figure {
+  position: relative;
+  line-height: 0%;
+}
+
+.CharacterCard-image {
+  width: 100%;
+}
+
+.CharacterCard-status {
+  background-color: var(--Black);
+  position: absolute;
+  top: 20px;
+  padding: 10px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.display-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  list-style: none;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.neon {
+  color: var(--Blue);
+  font-size: 20px;
+}
+
+.Alive {
+  background-color: var(--Green);
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.Dead {
+  background-color: var(--Red);
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.unknown {
+  background-color: var(--Orange);
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 992px) {
+  .CharacterCard-container {
+    max-width: 95vw;
+  }
+
+  .CharacterCard {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  button:hover {
+    background-color: var(--Blue);
+    color: var(--White);
+  }
+}
